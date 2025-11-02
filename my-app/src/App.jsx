@@ -1,4 +1,5 @@
 import "./App.css";
+import Button from "./components/Button";
 import Field from "./components/Field";
 import Greeting from "./components/Greeting";
 import MyComponent from "./components/MyComponent";
@@ -8,6 +9,11 @@ const isLoggedIn = true;
 
 const App = () => {
   const tasks = ["Buy a cat", "Make coffee", "Watch demo"];
+
+  const getArray = () => {
+    console.log(tasks);
+  };
+
   return (
     <>
       <div>
@@ -26,11 +32,16 @@ const App = () => {
           ))}
         </ul>
       </div>
-      <Greeting name={"Саша"} />
-      <Greeting name={"Петя"} />
-      <Greeting name={"Маша"} />
+      <Greeting id="g-1" name={"Саша"} />
+      <Greeting id="g-2" name={"Петя"} />
+      <Greeting id="g-3" name={"Маша"} />
       <Field id="input-field" placeholder="Введите что-то" />
       <Field id="input-field" placeholder="Не вводите" />
+      <Button
+        className="simple-button"
+        name="Нажми меня"
+        onClickTask={getArray}
+      />
     </>
   );
 };

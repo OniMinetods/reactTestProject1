@@ -17,3 +17,13 @@ body {
   border: 0;
   width: 120px;
 }
+
+.simple-button {
+  padding: 15px;
+  border-radius: 10px;
+  border: 0;
+}
+
+.simple-button:active {
+  box-shadow: 3px 7px 7px rgb(0, 0, 0, 0.5);
+}
