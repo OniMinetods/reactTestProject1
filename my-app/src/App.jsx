@@ -1,36 +1,35 @@
-import { useState } from "react";
 import "./App.css";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import MyComponent from "./components/MyComponent";
 
-function App() {
-  // useState() - хук, который добавляет состояние в функциональные компоненты
-  const [count, setCount] = useState(1);
+const username = "Artyom";
+const isLoggedIn = true;
 
+const App = () => {
+  const tasks = ["Buy a cat", "Make coffee", "Watch demo"];
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1>Название</h1>
+        <MyComponent />
+        {isLoggedIn && <p>Hi, {username}!</p>}
+        <p>{isLoggedIn ? `Hi, ${username}` : "Please, log in"}</p>
+        <p>{new Date().toLocaleDateString()}</p>
+        <hr />
+        <input type="text" />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count / 2)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div>
+        <ul className="inputElements">
+          {tasks.map((item) => (
+            <input className="inputElement" value={item} disabled></input>
+          ))}
+        </ul>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
-}
+};
+
+// Возвращается только один элемент (можно обернуть в <></>)
+
+// {Сюда можно передавать разные переменные и инструкции}
 
 export default App;

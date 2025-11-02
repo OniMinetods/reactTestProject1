@@ -6,7 +6,6 @@ import "./index.css";
 // Файл-сборщик, передается в index.html
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <input placeholder="Name" />
     <App />
   </StrictMode>
 );
