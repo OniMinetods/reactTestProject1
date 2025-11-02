@@ -1,4 +1,5 @@
 import "./App.css";
+import Field from "./components/Field";
 import Greeting from "./components/Greeting";
 import MyComponent from "./components/MyComponent";
 
@@ -28,6 +29,8 @@ const App = () => {
       <Greeting name={"Саша"} />
       <Greeting name={"Петя"} />
       <Greeting name={"Маша"} />
+      <Field id="input-field" placeholder="Введите что-то" />
+      <Field id="input-field" placeholder="Не вводите" />
     </>
   );
 };
