@@ -1,4 +1,5 @@
 import "./App.css";
+import Greeting from "./components/Greeting";
 import MyComponent from "./components/MyComponent";
 
 const username = "Artyom";
@@ -12,7 +13,7 @@ const App = () => {
         <h1>Название</h1>
         <MyComponent />
         {isLoggedIn && <p>Hi, {username}!</p>}
-        <p>{isLoggedIn ? `Hi, ${username}` : "Please, log in"}</p>
+        <p>{isLoggedIn ? `Hi, ${username}!` : "Please, log in!"}</p>
         <p>{new Date().toLocaleDateString()}</p>
         <hr />
         <input type="text" />
@@ -24,6 +25,9 @@ const App = () => {
           ))}
         </ul>
       </div>
+      <Greeting name={"Саша"} />
+      <Greeting name={"Петя"} />
+      <Greeting name={"Маша"} />
     </>
   );
 };

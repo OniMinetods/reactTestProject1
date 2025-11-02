@@ -1,7 +1,7 @@
 const MyComponent = () => {
   return (
     <>
-      <h1>My Component</h1>
+      <h2>My Component</h2>
     </>
   );
 };
